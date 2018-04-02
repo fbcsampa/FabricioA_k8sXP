@@ -1,0 +1,25 @@
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: 2018-04-02T17:17:35Z
+  labels:
+    run: nginx
+  name: nginx
+  namespace: default
+  resourceVersion: "3258"
+  selfLink: /api/v1/namespaces/default/services/nginx
+  uid: bc4bd985-3699-11e8-99cd-42010a8a0002
+spec:
+  clusterIP: 10.108.41.126
+  externalTrafficPolicy: Cluster
+  ports:
+  - nodePort: 31212
+    port: 80
+    protocol: TCP
+    targetPort: 80
+  selector:
+    run: nginx
+  sessionAffinity: None
+  type: NodePort
+status:
+  loadBalancer: {}
